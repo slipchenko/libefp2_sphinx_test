@@ -1,98 +1,108 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EFP calculations &mdash; EFP documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
 
-<!doctype html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8" />
-    <title>EFP calculations &#8212; EFP documentation 0.1 documentation</title>
-    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/bizstyle.js"></script>
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="BioEFP" href="bioefp.html" />
-    <link rel="prev" title="EFP paramters" href="parameters.html" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
-    <![endif]-->
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="bioefp.html" title="BioEFP"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="parameters.html" title="EFP paramters"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">EFP documentation 0.1 documentation</a> &#187;</li> 
-      </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">EFP calculations</a><ul>
-<li><a class="reference internal" href="#efp-energy-terms">EFP energy terms</a><ul>
-<li><a class="reference internal" href="#electrostatic-term">Electrostatic term</a><ul>
-<li><a class="reference internal" href="#charge-penetration-screening">Charge-penetration screening</a></li>
+    <link rel="prev" title="EFP paramters" href="parameters.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            EFP documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="learn_more.html">Learn more about EFP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papers.html">EFP publications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Method and usage</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="parameters.html">EFP paramters</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EFP calculations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#efp-energy-terms">EFP energy terms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#electrostatic-term">Electrostatic term</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#charge-penetration-screening">Charge-penetration screening</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#polarization-term">Polarization term</a></li>
-<li><a class="reference internal" href="#dispersion-term">Dispersion term</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#polarization-term">Polarization term</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dispersion-term">Dispersion term</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bio-EFP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bioefp.html">BioEFP</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software and tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="libefp.html">LibEFP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gamess.html">Computing EFP parameters in GAMESS</a></li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="parameters.html"
-                        title="previous chapter">EFP paramters</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="bioefp.html"
-                        title="next chapter">BioEFP</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/efp_calcs.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+    </nav>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="efp-calculations">
-<span id="efp-calcs"></span><h1>EFP calculations<a class="headerlink" href="#efp-calculations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="efp-energy-terms">
-<h2>EFP energy terms<a class="headerlink" href="#efp-energy-terms" title="Permalink to this headline">¶</a></h2>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EFP documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">EFP calculations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/efp_calcs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="efp-calculations">
+<span id="efp-calcs"></span><h1>EFP calculations<a class="headerlink" href="#efp-calculations" title="Permalink to this heading"></a></h1>
+<section id="efp-energy-terms">
+<h2>EFP energy terms<a class="headerlink" href="#efp-energy-terms" title="Permalink to this heading"></a></h2>
 <p>LibEFP can compute four inter-fragment energy terms:</p>
 <ul class="simple">
 <li><p>electrostatic</p></li>
@@ -100,8 +110,8 @@
 <li><p>dispersion</p></li>
 <li><p>exchange-repulsion</p></li>
 </ul>
-<div class="section" id="electrostatic-term">
-<span id="elec-energy"></span><h3>Electrostatic term<a class="headerlink" href="#electrostatic-term" title="Permalink to this headline">¶</a></h3>
+<section id="electrostatic-term">
+<span id="elec-energy"></span><h3>Electrostatic term<a class="headerlink" href="#electrostatic-term" title="Permalink to this heading"></a></h3>
 <p>Electrostatic energy is computed as a combination of charge-charge, charge-dipole,
 charge-quadrupole, charge-octupole, dipole-dipole, dipole-quadrupole, and quadrupole-quadrupole
 contributions.</p>
@@ -116,8 +126,8 @@ contributions.</p>
 </ul>
 <p>Out of those, only <a class="reference internal" href="parameters.html#coord"><span class="std std-ref">COORDINATES</span></a> section is mandatory as it determines fragment internal coordinate frame.
 All electrostatic terms (and corresponding parameters) are optional.</p>
-<div class="section" id="charge-penetration-screening">
-<h4>Charge-penetration screening<a class="headerlink" href="#charge-penetration-screening" title="Permalink to this headline">¶</a></h4>
+<section id="charge-penetration-screening">
+<h4>Charge-penetration screening<a class="headerlink" href="#charge-penetration-screening" title="Permalink to this heading"></a></h4>
 <p>Two options exist for accounting for charge-penetration contribution to electrostatic
 energy:</p>
 <ul class="simple">
@@ -132,10 +142,10 @@ This overlap-based charge-penetration energy is printed as a separate energy ter
 <p>Detailed description of damping functions and their benchmarks are published in
 <a class="reference external" href="http://dx.doi.org/10.1002/jcc.20520">Damping functions for electrostatic term</a>
 and <a class="reference external" href="http://dx.doi.org/10.1080/00268970802712449">Short-range damping functions</a> papers.</p>
-</div>
-</div>
-<div class="section" id="polarization-term">
-<span id="pol-energy"></span><h3>Polarization term<a class="headerlink" href="#polarization-term" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="polarization-term">
+<span id="pol-energy"></span><h3>Polarization term<a class="headerlink" href="#polarization-term" title="Permalink to this heading"></a></h3>
 <p>Polarization energy is computed using distributed anisotropic dipole polarizabilities. Induced dipoles,
 originating at the polarizability points, are converged until self-consistency. The default procedure is to
 solve for induced dipoles iteratively; the direct diagonalization of the induced dipole matrix is implemented
@@ -160,43 +170,48 @@ positions and values of electrostatic multipoles that are used to compute static
 the <a class="reference external" href="http://dx.doi.org/10.1080/00268970802712449">short-range damping functions paper</a>. A value of the damping parameter is controlled
 by an optional <a class="reference internal" href="parameters.html#polab"><span class="std std-ref">POLAB</span></a> keyword; smaller values provide stronger screening of polarization energies which might be necessary for fragments
 with large multiple moments (charged or strongly polar species) or large polarizabilities (e.g., large conjugated/aromatic molecules).</p>
-</div>
-<div class="section" id="dispersion-term">
-<h3>Dispersion term<a class="headerlink" href="#dispersion-term" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="dispersion-term">
+<h3>Dispersion term<a class="headerlink" href="#dispersion-term" title="Permalink to this heading"></a></h3>
 <p>Dispersion energy term captures the London interaction between the molecules. Formally, it can be expanded in
 series of (1/R) operator as $$E_{disp} = frac{C_6}{R^6} + frac{C_8}{R^8} + frac{C_{10}}{R^{10}} + …$$.
 In the case of distributed approach where dispersin contributions are computed as a sum of contributions due to
 individual parts of a molecules, the odd terms $frac{C_7}{R^7}$, $frac{C_9}{R^9}$ etc are also non-zero.
 The dispersion energy in LibEFP is computed as the first $frac{C_6}{R^6}$ in the dispersion expansion, using
 distributed dynamic polarizabilities for evaluating $C_6$ coefficient, i.e.,</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+           </div>
           </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="parameters.html" class="btn btn-neutral float-left" title="EFP paramters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bioefp.html" class="btn btn-neutral float-right" title="BioEFP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="bioefp.html" title="BioEFP"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="parameters.html" title="EFP paramters"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">EFP documentation 0.1 documentation</a> &#187;</li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
-    </div>
-  </body>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
