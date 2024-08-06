@@ -1,8 +1,5 @@
 .. _papers:
 
-****************
-EFP publications
-****************
 
 Original publications by Mark Gordon's group
 --------------------------------------------
@@ -59,4 +56,3 @@ Applications
 * `Ionization potentials of hydrated thymine <http://dx.doi.org/10.1021/jp110438c>`_
 * `Solvatochromic shifts in p-nitroaniline <http://dx.doi.org/10.1021/jp110026c>`_
 * `Interactions Between Halide Anions and a Molecular Hydrophobic Interface <http://dx.doi.org/10.1039/C2FD20082A>`_
-

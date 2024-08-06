@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'EFP documentation'
-copyright = '2020'
+copyright = '2020-2024'
 author = 'Lyudmila Slipchenko'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = '0.2'
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,7 +31,7 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autosectionlabel'
+    'sphinx.ext.autosectionlabel', 'sphinx_rtd_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
