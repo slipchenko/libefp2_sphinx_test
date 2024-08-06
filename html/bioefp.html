@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioEFP &mdash; EFP documentation 0.1 documentation</title>
+  <title>BioEFP &mdash; EFP documentation 0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
 
@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="LibEFP" href="libefp.html" />
+    <link rel="next" title="Flexible EFP" href="flexible_efp.html" />
     <link rel="prev" title="EFP calculations" href="efp_calcs.html" /> 
 </head>
 
@@ -47,21 +47,31 @@
               <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="learn_more.html">Learn more about EFP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="papers.html">EFP publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">EFP gallery</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Method and usage</span></p>
-<ul>
+<p class="caption" role="heading"><span class="caption-text">EFP in a nutshell</span></p>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="parameters.html">EFP paramters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="efp_calcs.html">EFP calculations</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Bio-EFP</span></p>
-<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">BioEFP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flexible_efp.html">Flexible EFP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qmefp.html">QM/EFP</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Software and tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">Software, tools, and tips</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="libefp.html">LibEFP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gamess.html">Computing EFP parameters in GAMESS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EFP bibliography</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="papers.html">Original publications by Mark Gordon’s group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papers.html#review-papers">Review papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papers.html#development-of-efp-terms">Development of EFP terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papers.html#macromolecules-and-flexible-fragments">Macromolecules and flexible fragments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papers.html#software-development">Software development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papers.html#qm-efp-models">QM/EFP models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papers.html#accuracy-benchmarks">Accuracy benchmarks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papers.html#applications">Applications</a></li>
 </ul>
 
         </div>
@@ -97,11 +107,6 @@ Proteins can be split along C-Ca bonds, as shown below.</p>
 The original work used the following script <cite>step2.gen.gamess.pl</cite> <strong>Where is it?</strong>.
 For a new robust version of the script check out this
 <a class="reference external" href="https://github.itap.purdue.edu/Slipchenko-group/">BioEFP tutorial</a> <strong>The tutorial is not there yet!</strong></p>
-<p>But wait, do I need to recompute fragment parameters for each new geometry of my
-polymer? Not necessary, if you did a homework. Check out this paper on
-<a class="reference external" href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.6b04166">Flexible EFP</a>.
-A collection of scripts to help you set-up these jobs
-is <a class="reference external" href="https://github.itap.purdue.edu/Slipchenko-group/Flexible_EFP_scripts/">Flexible EFP tutorial</a>.</p>
 </section>
 
 
@@ -109,13 +114,13 @@ is <a class="reference external" href="https://github.itap.purdue.edu/Slipchenko
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="efp_calcs.html" class="btn btn-neutral float-left" title="EFP calculations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="libefp.html" class="btn btn-neutral float-right" title="LibEFP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="flexible_efp.html" class="btn btn-neutral float-right" title="Flexible EFP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020.</p>
+    <p>&#169; Copyright 2020-2024.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
