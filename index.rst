@@ -26,6 +26,7 @@ If you use EFP, please cite:
    :caption: EFP in a nutshell
 
    parameters
+   efpmd
    efp_calcs
    bioefp
    flexible_efp
